@@ -1,18 +1,18 @@
 #pragma once
 #include "ListFine.h"
 
-
+struct Node {
+	string key;
+	ListFine list;
+	Node* parent, * left, * right;
+};
 
 class Tree
 {
 private:
 	Node *root;
 public:
-	struct Node {
-		string key;
-		ListFine list;
-		Node* parent, * left, * right;
-	};
+	
 	Tree();
 	~Tree();
 	//печать от указанного узла

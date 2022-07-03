@@ -7,8 +7,7 @@ using namespace std;
 int main()
 {
     
-    Tree tree;    
-    Tree::Node();
-    tree.Insert();
+    Tree tree;     
+    
 
 }
