@@ -15,11 +15,11 @@ class Tree
 {
 private:
 	Nodes* root;
-public:
-	
+public:	
 	Tree();	
 	void Print(Nodes* node);
 	void Print(string key);
-	void Add(Fine fine);	
+	void Add(Fine fine);
+	Nodes* getTree();
 };
 
