@@ -4,7 +4,7 @@
 struct Node
 {
 	Fine fine;
-	Node* nexNode;		
+	Node* nexNode;
 };
 
 class ListFine
