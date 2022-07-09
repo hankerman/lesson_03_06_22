@@ -3,24 +3,23 @@
 #include <iostream>
 #include <string>
 
-class Node {
+class Nodes {
 public:
 	string key;
 	ListFine list;
-	Node* parent, * left, * right;
-	Node();
+	Nodes* parent, * left, * right;
+	Nodes();
 };
 
 class Tree
 {
 private:
-	Node* root;
+	Nodes* root;
 public:
 	
 	Tree();	
-	void Print(Node* node);
+	void Print(Nodes* node);
 	void Print(string key);
-	Node* Search(Node* node, string key);		
 	void Add(Fine fine);	
 };
 

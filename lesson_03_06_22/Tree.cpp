@@ -5,7 +5,7 @@ Tree::Tree()
 	root = nullptr;
 }
 
-void Tree::Print(Node* node)
+void Tree::Print(Nodes* node)
 {
 	
 	if (node != 0)
@@ -16,23 +16,10 @@ void Tree::Print(Node* node)
 	}
 }
 
-Node* Tree::Search(Node* node, string key)
-{
-	//Пока есть узлы и ключи не совпадают
-	while (node != 0 && node->key.find(key) != 0)
-	{
-		if (node->key.find(key) < 0)
-			node = node->left;
-		else
-			node = node->right;
-	}
-	return node;
-}
-
 void Tree::Add(Fine fine)
 {
 	if (root == nullptr) {
-		root = new Node;
+		root = new Nodes;
 		root->key = fine.getFine();
 		root->list.add(fine);
 		root->parent = nullptr;
@@ -51,7 +38,7 @@ void Tree::Add(Fine fine)
 
 }
 
-Node::Node()
+Nodes::Nodes()
 {
 	this->key = " ";
 	this->parent = nullptr;
