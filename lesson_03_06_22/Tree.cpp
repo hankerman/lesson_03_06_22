@@ -40,22 +40,22 @@ void Tree::Add(Fine fine)
 		temp->left = nullptr;
 		temp->right = nullptr;
 		do{
-			if (previous->key == fine.getFine()) {
-				previous->list.add(fine);
+			if (tmp->key == fine.getFine()) {
+				tmp->list.add(fine);
 				break;
 			}
 			if (temp->key < previous->key) {
 				previous = tmp;
 				previous->parent = predprevious;
 				predprevious = predprevious->left;
-				tmp = tmp->left;				
+				tmp = tmp->left;
 				chek = 1;
 			}
 			else {
 				previous = tmp;
 				previous->parent = predprevious;
 				predprevious = predprevious->right;
-				tmp = tmp->right;				
+				tmp = tmp->right;
 				chek = 2;
 			}
 		} while (tmp != nullptr);
